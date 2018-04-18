@@ -1,0 +1,52 @@
+/*
+ * Forms
+ */
+ $errorColour: #FA787E;
+ $validColour: #007069;
+ 
+.form {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  &__label {
+    flex: 0 1 11rem;
+    margin-bottom: 0.25rem;
+    align-self: flex-start;
+  }
+
+  &__item {
+      flex: 0 1 15rem;
+      max-width: 15rem; 
+      
+      input, textarea {
+        display:block;
+        border-radius: 0.2rem;
+        width: 100%;
+        padding: 0.45rem;
+        border: 1px solid #ccc;
+      }
+  }
+  
+  &__errors{
+    color: $errorColour;
+    font-size: 0.75rem
+  }
+  
+  .ng-invalid.ng-touched {
+    border: 1px solid $errorColour;
+    border-left: 5px solid $errorColour;
+  }
+  
+  .ng-valid.ng-touched {
+    border: 1px solid $validColour;
+    border-left: 2px solid $validColour;
+  }
+}
+
+.required {
+  color: $errorColour;
+}

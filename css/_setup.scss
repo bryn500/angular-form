@@ -1,0 +1,14 @@
+// Font
+$font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Colours
+$fontColour: #333;
+$linkColour: #6F0101;
+$errorColour: #FA787E;
+
+// Mixins
+@mixin noListStyle {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

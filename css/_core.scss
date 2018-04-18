@@ -1,0 +1,60 @@
+/*
+ * Core styles
+ */
+html {
+  min-width: 320px;
+  font-family: $font-stack;
+  font-size: 100%;
+  line-height: 1.4;
+  color: $fontColour;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+  padding: 1rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+a {
+  color: $linkColour;
+  text-decoration: none;
+  
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+}
+
+.wordbreak {
+  word-break: break-all;
+}
+
+.mainContent {
+  padding: 1rem 0;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    color: $fontColour;
+    border: 1px solid $fontColour;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 0.2rem;
+        
+    &:hover, &:focus {
+        color: #fff;
+        background-color: $fontColour;
+        opacity: 0.9;
+        outline: none;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,24 @@
+/*
+ * Header
+ */
+.pageHeading {
+ margin: 0;
+}
+
+.nav {
+  &__list{
+    @include noListStyle;
+    display: flex;
+  }
+  
+  &__item {
+    margin-right: 1.5rem;
+    
+    &:last-of-type {
+      a {
+        margin-right: 0;
+      }
+      
+    }
+  }
+}

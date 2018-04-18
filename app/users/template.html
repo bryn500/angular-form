@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody class="wordbreak">
+    <tr ng-repeat="item in $ctrl.users">
+      <td>{{ item.username }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.message }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,45 @@
+<section class="signup">
+  <header>
+    <h1>Signup</h1>
+  </header>
+
+  <form class="form" name="$ctrl.signupForm" ng-submit="$ctrl.addUser(user)" novalidate>
+    <div class="form__row">
+      <label class="form__label" for="username">Username: <span class="required">*</span></label>
+      <div class="form__item">
+        <input id="username" name="username" type="text" ng-model="user.username" username-validation required maxlength="50" />
+        <div class="form__errors" ng-show="$ctrl.signupForm.$submitted || $ctrl.signupForm.username.$touched">
+          <span ng-show="$ctrl.signupForm.username.$error.username-validation">This username is already taken</span>
+          <span ng-show="$ctrl.signupForm.username.$error.maxlength">This username is too long</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <label class="form__label" for="email">Email: <span class="required">*</span></label>
+      <div class="form__item">
+        <input name="email" type="email" ng-model="user.email" required maxlength="100" />
+        <div class="form__errors" ng-show="$ctrl.signupForm.$submitted || $ctrl.signupForm.email.$touched">
+          <span ng-show="$ctrl.signupForm.email.$error.email">Please provide a valid email.</span>
+          <span ng-show="$ctrl.signupForm.email.$error.maxlength">This email is too long</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <label class="form__label" for="message">Message: <span class="required">*</span></label>
+      <div class="form__item">
+        <textarea id="message" ng-model="user.message" required maxlength="250"></textarea>
+        <div class="form__errors" ng-show="$ctrl.signupForm.$submitted || $ctrl.signupForm.username.$touched">
+          <span ng-show="$ctrl.signupForm.message.$error.maxlength">This message is too long</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <button type="submit" class="btn">
+        Save
+      </button>
+    </div>
+  </form>
+</section>
